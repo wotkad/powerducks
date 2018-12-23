@@ -1,0 +1,99 @@
+.pageheadingcareers
+	overflow hidden
+	padding 50px
+	position relative
+	margin-top 160px
+	margin-bottom 40px
+	border-radius 5px
+	height 222px
+	background linear-gradient(180deg, #FFFFFF 0%, #EBEBEB 100%)
+	box-shadow 0px 4px 60px rgba(0, 0, 0, 0.15)
+	&__breadcrums
+		position relative
+		z-index 2
+		margin-bottom 30px
+		a
+			&:nth-child(1)
+				color $black
+				font-family $B-Regular
+				font-size 1.125rem
+				line-height 18px
+				border-bottom 1px solid $black
+				transition .3s
+				&:hover
+					color $breadcrums
+					border-color $breadcrums
+			&:nth-child(3)
+				color $breadcrums
+				font-family $B-Regular
+				font-size 1.125rem
+				line-height 18px
+				transition .3s
+				border-bottom 1px solid transparent
+				&:hover
+					color $black
+					border-bottom 1px solid $black
+		span
+			&:nth-child(2)
+				color $breadcrums
+				margin 0 4px
+	&__title
+		position relative
+		z-index 2
+		span
+			&:nth-child(1)
+				font-family $B-Bold
+				font-size 5.75rem
+				line-height 92px
+				color $red
+			&:nth-child(2)
+				margin-left 10px
+				color $black
+				font-family $B-Bold
+				font-size 5.75rem
+				line-height 92px
+	&__image
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+	&__shadow
+		display none
+		position absolute
+		top 0
+		right 0
+		border-radius 50%
+		box-shadow 0 0 150px 320px rgba(95, 0, 203, 0.5)
+@media(max-width: 991px)
+	.pageheadingcareers
+		margin-top 120px
+		padding 30px
+		height auto
+		&__title
+			span
+				&:nth-child(1)
+					display block
+					line-height 100%
+					font-size 5.125rem
+				&:nth-child(2)
+					line-height 100%
+					margin-left 0
+					font-size 5.125rem
+@media(max-width: 480px)
+	.pageheadingcareers
+		margin-top 100px
+		padding 20px
+		height auto
+		&__image
+			opacity .2
+		&__title
+			display flex
+			flex-wrap wrap
+			span
+				&:nth-child(1)
+					font-size 3.25rem
+					flex-basis 100%
+				&:nth-child(2)
+					flex-basis 50%
+					font-size 3.25rem

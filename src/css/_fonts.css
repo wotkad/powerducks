@@ -1,0 +1,75 @@
+@font-face {
+  font-display: swap;
+  font-family: 'FontAwesome';
+  src: url("/fonts/FontAwesome.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'B-Bold';
+  src: url("/fonts/B-Bold.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'B-Book';
+  src: url("/fonts/B-Book.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'B-Light';
+  src: url("/fonts/B-Light.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'B-Regular';
+  src: url("/fonts/B-Regular.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'B-Thin';
+  src: url("/fonts/B-Thin.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Regular';
+  src: url("/fonts/Regular.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Italic';
+  src: url("/fonts/Italic.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Semibold';
+  src: url("/fonts/Semibold.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Light';
+  src: url("/fonts/Light.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Bold';
+  src: url("/fonts/Bold.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'SemiboldItalic';
+  src: url("/fonts/SemiboldItalic.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'ExtraLightItalic';
+  src: url("/fonts/ExtraLightItalic.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'LightItalic';
+  src: url("/fonts/LightItalic.otf");
+}
+@font-face {
+  font-display: swap;
+  font-family: 'ExtraLight';
+  src: url("/fonts/ExtraLight.otf");
+}

@@ -1,0 +1,118 @@
+.titles
+	padding 90px 0 70px
+	display flex
+	align-items center
+	justify-content space-between
+	flex-basis 100%
+	&__title
+		font-size 3.25rem
+		font-family B-Bold
+		color $gray
+		position relative
+		padding 0 25px 0 75px
+		line-height 52px
+		&:before
+			content ''
+			position absolute
+			left 0px
+			top 24px
+			height 2px
+			background-color $red
+			width 50px
+			display inline-block
+	&__subtitle
+		color $gray
+		font-family $B-Book
+		font-size 2rem
+		padding 0 75px 0 25px
+		position relative
+		line-height 32px
+		& span
+			&:nth-child(1)
+				color $red
+		&:before
+			content ''
+			position absolute
+			right 0px
+			top 16px
+			height 2px
+			background-color #e5e5e5
+			width 50px
+			display inline-block
+	&__separator
+		height 2px
+		width 47%
+		background-color #e5e5e5
+#wetakepridein
+	.titles
+		&__separator
+			width 41%
+.newsdetail
+	.titles
+		padding-top 30px
+		&__separator
+			width 70%
+@media(max-width: 1100px)
+	.newsdetail
+		.titles
+			&__separator
+				width 60%
+	#wetakepridein
+		.titles
+			&__separator
+				width 30%
+	.titles
+		&__separator
+			width 40%
+@media(max-width: 768px)
+	.newsdetail
+		.titles
+			&__separator
+				width 50%
+	#wetakepridein
+		.titles
+			&__separator
+				width 17%
+	.titles
+		padding 60px 0
+		&__separator
+			width 30%
+@media(max-width: 680px)
+	.newsdetail
+		.titles
+			&__separator
+				width 40%
+	.titles
+		padding 40px 0
+		flex-direction column
+		&__title
+			flex-basis 100%
+			padding 0 70px
+			font-size 2rem
+			&:after
+				content ''
+				position absolute
+				right 0px
+				top 20px
+				height 2px
+				background-color $red
+				width 50px
+				display inline-block
+		&__subtitle
+			flex-basis 100%
+			padding 0 90px
+			font-size 1.125rem
+			&:after
+				content ''
+				position absolute
+				left 0px
+				top 12px
+				height 2px
+				background-color #e5e5e5
+				width 70px
+				display inline-block
+			&:before
+				background-color #e5e5e5
+				width 70px
+		&__separator
+			display none

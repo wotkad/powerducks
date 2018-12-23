@@ -1,0 +1,104 @@
+.pageheadingcontacts {
+  overflow: hidden;
+  padding: 50px;
+  position: relative;
+  margin-top: 160px;
+  margin-bottom: 40px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  height: 222px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ebebeb));
+  background: -webkit-linear-gradient(top, #fff 0%, #ebebeb 100%);
+  background: -o-linear-gradient(top, #fff 0%, #ebebeb 100%);
+  background: linear-gradient(180deg, #fff 0%, #ebebeb 100%);
+  -webkit-box-shadow: 0px 4px 60px rgba(0,0,0,0.15);
+          box-shadow: 0px 4px 60px rgba(0,0,0,0.15);
+}
+.pageheadingcontacts__breadcrums {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+.pageheadingcontacts__breadcrums a:nth-child(1) {
+  color: $black;
+  font-family: $B-Regular;
+  font-size: 1.125rem;
+  line-height: 18px;
+  border-bottom: 1px solid $black;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.pageheadingcontacts__breadcrums a:nth-child(1):hover {
+  color: $breadcrums;
+  border-color: $breadcrums;
+}
+.pageheadingcontacts__breadcrums a:nth-child(3) {
+  color: $breadcrums;
+  font-family: $B-Regular;
+  font-size: 1.125rem;
+  line-height: 18px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
+}
+.pageheadingcontacts__breadcrums a:nth-child(3):hover {
+  color: $black;
+  border-bottom: 1px solid $black;
+}
+.pageheadingcontacts__breadcrums span:nth-child(2) {
+  color: $breadcrums;
+  margin: 0 4px;
+}
+.pageheadingcontacts__title {
+  position: relative;
+  z-index: 2;
+}
+.pageheadingcontacts__title span:nth-child(1) {
+  font-family: $B-Bold;
+  font-size: 5.75rem;
+  line-height: 92px;
+  color: $red;
+}
+.pageheadingcontacts__title span:nth-child(2) {
+  margin-left: 10px;
+  color: $black;
+  font-family: $B-Bold;
+  font-size: 5.75rem;
+  line-height: 92px;
+}
+.pageheadingcontacts__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.pageheadingcontacts__shadow {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-shadow: 0 0 150px 300px rgba(151,0,0,0.5);
+          box-shadow: 0 0 150px 300px rgba(151,0,0,0.5);
+}
+@media (max-width: 991px) {
+  .pageheadingcontacts {
+    margin-top: 120px;
+    padding: 30px;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .pageheadingcontacts {
+    margin-top: 100px;
+    padding: 30px;
+    height: auto;
+  }
+  .pageheadingcontacts__image {
+    opacity: 0.2;
+  }
+}

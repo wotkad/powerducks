@@ -1,0 +1,202 @@
+.selectedwork-overlay1
+	position absolute
+	left 0
+	top 0
+.selectedwork-overlay2
+	position absolute
+	right 0
+	bottom 0
+.selectedwork
+	display flex
+	flex-direction column
+	align-items center
+	padding-bottom 87px
+	&__button
+		text-align center
+		background-color $white
+		border 1px solid $text
+		font-family $B-Bold
+		font-size 1.5rem
+		line-height 24px
+		letter-spacing 1px
+		padding 23px 100px
+		color $text
+		border-radius 5px
+		transition .3s
+		&:hover
+			color $white
+			border-color $red
+			background-color $red
+			box-shadow 0px 0px 60px $red
+	&__slider
+		width 100%
+		.swiper-container-selectedwork
+			padding-top 10px
+		.swiper-button-next.swiper-button-disabled,
+		.swiper-button-prev.swiper-button-disabled
+			background none
+			background-color rgba(0,0,0,.3)
+			border-radius 5px
+			width 40px
+			height 50px
+			display flex
+			align-items center
+			justify-content center
+			& i
+				color $white
+		.swiper-button-prev, .swiper-button-next
+			display flex
+			align-items center
+			justify-content center
+			background none
+			background-color $red
+			border-radius 5px
+			width 40px
+			transition .3s
+			border 2px solid transparent
+			height 50px
+			& i
+				color $white
+				transition .3s
+			&:hover
+				border 2px solid $red
+				background-color $white
+			&:hover i
+				color $red
+		.swiper-button-prev
+			left -55px
+		.swiper-button-next
+			right -55px
+		.swiper-pagination
+			display none
+			justify-content center
+			position relative
+			&:before
+				content ''
+				height 1px
+				width 100%
+				display inline-block
+				position absolute
+				background-color #C4C4C4
+				top calc(50% - 1px)
+		.swiper-pagination-bullet
+			opacity 1
+			background $white
+			margin 0 4px
+			width 25px
+			height 25px
+			z-index 2
+			border 1px solid #C4C4C4
+			display flex
+			align-items center
+			justify-content center
+		.swiper-pagination-bullet-active
+			position relative
+			border-color $red
+			&:before
+				content ''
+				background $red
+				border-color $red
+				position absolute
+				display inline-block
+				width 17px
+				height 17px
+				border-radius 50%
+		&-slide
+			transition .3s
+			border-radius 5px
+			margin-bottom 70px
+			display block
+			&-img
+				border-radius 5px 5px 0 0
+				height 483px
+			&-corner
+				position absolute
+				top -13px
+				left 35px
+			&-logo
+				position absolute
+				top -8px
+				left 39px
+				width 135px
+				height 155px
+				background-color #1B1B1B
+				display flex
+				align-items center
+				justify-content center
+			&__content
+				padding 25px 41px
+				background linear-gradient(180deg, #FFFFFF 0%, #EBEBEB 100%)
+				border-radius 0 0 5px 5px
+				box-shadow 0px 4px 60px rgba(0, 0, 0, 0.3)
+				position relative
+				overflow hidden
+				&-title
+					font-family $B-Regular
+					font-size 2rem
+					line-height 32px
+					color $text
+					margin-bottom 15px
+					z-index 2
+					position relative
+				&-text
+					font-family $Regular
+					font-size 1.125rem
+					line-height 28px
+					color $black
+					width 75%
+					z-index 2
+					position relative
+				&-bg
+					position absolute
+					right 0
+					bottom 0
+					top 0
+					z-index 1
+					& svg path
+						transition .5s
+			&:hover .selectedwork__slider-slide__content-bg svg path
+				fill-opacity 1
+@media(max-width: 83.125rem)
+	.selectedwork
+		padding-bottom 40px
+		&__slider
+			padding-bottom 40px
+			.swiper-button-next.swiper-button-disabled,
+			.swiper-button-prev.swiper-button-disabled,
+			.swiper-button-prev,
+			.swiper-button-next
+				display none
+			.swiper-pagination
+				display flex
+			&-slide
+				&__content
+					padding 30px 20px
+@media(max-width: 31.25rem)
+	.selectedwork
+		&__slider
+			&-slide
+				&__content
+					&-bg
+						display none
+					&-title
+						width 100%
+					&-text
+						width 100%
+				&-img
+					height 240px
+		&__button
+			padding 23px 0
+			text-align center
+			width 100%
+		.swiper-pagination-bullet
+			width 15px
+			height 15px
+		.swiper-pagination-bullet-active
+			&:before
+				width 9px
+				height 9px
+	.selectedwork-overlay1,
+	.selectedwork-overlay2
+		img
+			width 100%

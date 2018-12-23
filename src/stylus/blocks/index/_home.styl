@@ -1,0 +1,169 @@
+#home
+	overflow hidden
+.home
+	height 100vh
+	padding-top 30px
+	position relative
+	display flex
+	justify-content space-between
+	&-showrel
+		position absolute
+		background-color #1d1e26
+		top 0
+		left 0
+		right 0
+		bottom 0
+		video
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			-o-object-fit cover
+			object-fit cover
+	&__block
+		display flex
+		transition .3s
+		flex-direction column
+		height 100%
+		justify-content center
+		flex-basis 50%
+		&:nth-child(2)
+			flex-basis 35%
+		&-title
+			font-family $B-Bold
+			font-size 5.75rem
+			color $white
+			margin-bottom 25px
+		&-desc
+			color $red
+			font-family $B-Bold
+			font-size 4.5rem
+			margin-bottom 50px
+		&-button
+			button
+				background $white
+				color $black
+				border-radius 5px
+				padding 23px 75px
+				font-family $B-Bold
+				font-size 1.5rem
+				line-height 24px
+				letter-spacing 1px
+				cursor pointer
+				border none
+				transition .3s
+				&:hover
+					background-color $red
+					color $white
+					box-shadow 0px 0px 60px $red
+		&-buttonstop
+			position relative
+			&:before
+				content ''
+				position absolute
+				top 50%
+				transition .3s
+				height 1px
+				left -400%
+				width 400%
+				pointer-events none
+				background-color rgba(255, 255, 255, 0.3)
+			&:after
+				content ''
+				position absolute
+				top 50%
+				transition .3s
+				height 1px
+				right -400%
+				width 400%
+				pointer-events none
+				background-color rgba(255, 255, 255, 0.3)
+			&-item
+				display flex
+				justify-content center
+				align-items center
+				transition .3s
+				cursor pointer
+				padding 30px
+				position relative
+				& span
+					color rgba(255, 255, 255, 0.9)
+					font-size 2rem
+					font-family $B-Bold
+					line-height 32px
+					padding 20px
+					letter-spacing 1px
+				&:hover
+					transform scale(1.1)
+				&:before
+					content ''
+					position absolute
+					top -400%
+					transition .3s
+					height 400%
+					pointer-events none
+					left 50%
+					width 1px
+					background-color rgba(255, 255, 255, 0.3)
+				&:after
+					content ''
+					position absolute
+					transition .3s
+					bottom -400%
+					pointer-events none
+					height 400%
+					left 50%
+					width 1px
+					background-color rgba(255, 255, 255, 0.3)
+				&:hover&:after
+					background-color rgba(255, 255, 255, 1)
+				&:hover&:before
+					background-color rgba(255, 255, 255, 1)
+			&:hover.home__block-buttonstop:before
+				background-color rgba(255, 255, 255, 1)
+			&:hover.home__block-buttonstop:after
+				background-color rgba(255, 255, 255, 1)
+@media(max-width: 64rem)
+	.home
+		height 100vh
+		display flex
+		align-items center
+		justify-content center
+		flex-wrap wrap
+		&__block
+			flex-basis 100%
+			height auto
+			text-align center
+			&:nth-child(2)
+				flex-basis 100%
+				margin-top -150px
+			&-title
+				font-size 5.125rem
+			&-desc
+				font-size 3.875rem
+			&-buttonstop
+				&:before
+					display none
+				&:after
+					display none
+				&-item
+					&:before
+						display none
+					&:after
+						display none
+@media(max-width: 30rem)
+	.home
+		height 100vh
+		&__block
+			flex-basis 100%
+			&-title
+				font-size 3.25rem
+				margin-bottom 20px
+			&-desc
+				font-size 2rem
+				margin-bottom 35px
+			&-button
+				button
+					padding 16px
+					width 100%

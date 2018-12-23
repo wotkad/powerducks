@@ -1,0 +1,320 @@
+.selectedwork-overlay1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.selectedwork-overlay2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.selectedwork {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 87px;
+}
+.selectedwork__button {
+  text-align: center;
+  background-color: $white;
+  border: 1px solid $text;
+  font-family: $B-Bold;
+  font-size: 1.5rem;
+  line-height: 24px;
+  letter-spacing: 1px;
+  padding: 23px 100px;
+  color: $text;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.selectedwork__button:hover {
+  color: $white;
+  border-color: $red;
+  background-color: $red;
+  -webkit-box-shadow: 0px 0px 60px $red;
+          box-shadow: 0px 0px 60px $red;
+}
+.selectedwork__slider {
+  width: 100%;
+}
+.selectedwork__slider .swiper-container-selectedwork {
+  padding-top: 10px;
+}
+.selectedwork__slider .swiper-button-next.swiper-button-disabled,
+.selectedwork__slider .swiper-button-prev.swiper-button-disabled {
+  background: none;
+  background-color: rgba(0,0,0,0.3);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  width: 40px;
+  height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.selectedwork__slider .swiper-button-next.swiper-button-disabled i,
+.selectedwork__slider .swiper-button-prev.swiper-button-disabled i {
+  color: $white;
+}
+.selectedwork__slider .swiper-button-prev,
+.selectedwork__slider .swiper-button-next {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: none;
+  background-color: $red;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  width: 40px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  height: 50px;
+}
+.selectedwork__slider .swiper-button-prev i,
+.selectedwork__slider .swiper-button-next i {
+  color: $white;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.selectedwork__slider .swiper-button-prev:hover,
+.selectedwork__slider .swiper-button-next:hover {
+  border: 2px solid $red;
+  background-color: $white;
+}
+.selectedwork__slider .swiper-button-prev:hover i,
+.selectedwork__slider .swiper-button-next:hover i {
+  color: $red;
+}
+.selectedwork__slider .swiper-button-prev {
+  left: -55px;
+}
+.selectedwork__slider .swiper-button-next {
+  right: -55px;
+}
+.selectedwork__slider .swiper-pagination {
+  display: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+.selectedwork__slider .swiper-pagination:before {
+  content: '';
+  height: 1px;
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  background-color: #c4c4c4;
+  top: -webkit-calc(50% - 1px);
+  top: calc(50% - 1px);
+}
+.selectedwork__slider .swiper-pagination-bullet {
+  opacity: 1;
+  background: $white;
+  margin: 0 4px;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  border: 1px solid #c4c4c4;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.selectedwork__slider .swiper-pagination-bullet-active {
+  position: relative;
+  border-color: $red;
+}
+.selectedwork__slider .swiper-pagination-bullet-active:before {
+  content: '';
+  background: $red;
+  border-color: $red;
+  position: absolute;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.selectedwork__slider-slide {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  margin-bottom: 70px;
+  display: block;
+}
+.selectedwork__slider-slide-img {
+  -webkit-border-radius: 5px 5px 0 0;
+          border-radius: 5px 5px 0 0;
+  height: 483px;
+}
+.selectedwork__slider-slide-corner {
+  position: absolute;
+  top: -13px;
+  left: 35px;
+}
+.selectedwork__slider-slide-logo {
+  position: absolute;
+  top: -8px;
+  left: 39px;
+  width: 135px;
+  height: 155px;
+  background-color: #1b1b1b;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.selectedwork__slider-slide__content {
+  padding: 25px 41px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ebebeb));
+  background: -webkit-linear-gradient(top, #fff 0%, #ebebeb 100%);
+  background: -o-linear-gradient(top, #fff 0%, #ebebeb 100%);
+  background: linear-gradient(180deg, #fff 0%, #ebebeb 100%);
+  -webkit-border-radius: 0 0 5px 5px;
+          border-radius: 0 0 5px 5px;
+  -webkit-box-shadow: 0px 4px 60px rgba(0,0,0,0.3);
+          box-shadow: 0px 4px 60px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.selectedwork__slider-slide__content-title {
+  font-family: $B-Regular;
+  font-size: 2rem;
+  line-height: 32px;
+  color: $text;
+  margin-bottom: 15px;
+  z-index: 2;
+  position: relative;
+}
+.selectedwork__slider-slide__content-text {
+  font-family: $Regular;
+  font-size: 1.125rem;
+  line-height: 28px;
+  color: $black;
+  width: 75%;
+  z-index: 2;
+  position: relative;
+}
+.selectedwork__slider-slide__content-bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+}
+.selectedwork__slider-slide__content-bg svg path {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.selectedwork__slider-slide:hover .selectedwork__slider-slide__content-bg svg path {
+  fill-opacity: 1;
+}
+@media (max-width: 83.125rem) {
+  .selectedwork {
+    padding-bottom: 40px;
+  }
+  .selectedwork__slider {
+    padding-bottom: 40px;
+  }
+  .selectedwork__slider .swiper-button-next.swiper-button-disabled,
+  .selectedwork__slider .swiper-button-prev.swiper-button-disabled,
+  .selectedwork__slider .swiper-button-prev,
+  .selectedwork__slider .swiper-button-next {
+    display: none;
+  }
+  .selectedwork__slider .swiper-pagination {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .selectedwork__slider-slide__content {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 31.25rem) {
+  .selectedwork__slider-slide__content-bg {
+    display: none;
+  }
+  .selectedwork__slider-slide__content-title {
+    width: 100%;
+  }
+  .selectedwork__slider-slide__content-text {
+    width: 100%;
+  }
+  .selectedwork__slider-slide-img {
+    height: 240px;
+  }
+  .selectedwork__button {
+    padding: 23px 0;
+    text-align: center;
+    width: 100%;
+  }
+  .selectedwork .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+  .selectedwork .swiper-pagination-bullet-active:before {
+    width: 9px;
+    height: 9px;
+  }
+  .selectedwork-overlay1 img,
+  .selectedwork-overlay2 img {
+    width: 100%;
+  }
+}

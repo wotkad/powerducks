@@ -1,0 +1,237 @@
+#whatwedo
+	background-color $bg-gray
+.whatwedo
+	display flex
+	flex-wrap wrap
+	.swiper-container-whatwedo
+		padding 16px 0 56px 0
+		overflow hidden
+	.swiper-slide
+		height auto
+	.swiper-pagination
+		display none
+		justify-content center
+		position relative
+		&:before
+			content ''
+			height 1px
+			width 100%
+			display inline-block
+			position absolute
+			background-color #C4C4C4
+			top calc(50% - 1px)
+	.swiper-pagination-bullet
+		opacity 1
+		background $white
+		width 25px
+		height 25px
+		z-index 2
+		border 1px solid #C4C4C4
+		display flex
+		align-items center
+		justify-content center
+	.swiper-pagination-bullet-active
+		position relative
+		border-color $red
+		&:before
+			content ''
+			background $red
+			border-color $red
+			position absolute
+			display inline-block
+			width 17px
+			height 17px
+			border-radius 50%
+	&__block:nth-child(3n+3)
+		margin-right 0
+	&__block
+		background linear-gradient(180deg, #FFFFFF 0%, #EBEBEB 100%)
+		border-radius 5px
+		flex-basis calc(33.33334% - 27px)
+		padding 25px 40px
+		position relative
+		margin-bottom 40px
+		height 247px
+		transition .3s
+		&:hover &-header-img
+			transform scale(.37)
+			margin-left 210px
+			margin-top -65px
+		&:hover
+			background 0
+			box-shadow 0px 40px 60px rgba(0, 0, 0, 0.3)
+			.whatwedo__block-header-title
+				margin-top -100px
+				font-size 1.125rem
+				line-height 18px
+				height auto
+			.whatwedo__block-header-titles
+				opacity 0
+			.whatwedo__block-header
+				background #EBEBEB
+				opacity 1
+				transition .5s
+			.whatwedo__block-header
+				opacity 1
+				transition .3s
+			.whatwedo__block-container-text
+				transform: translateX(0)
+			.whatwedo__block-header-img
+				margin-bottom 0
+		&-header
+			left 0
+			right 0
+			position absolute
+			height 87px
+			top 0
+			background: none
+			border-radius 5px
+			transition .5s
+			opacity 0
+			&-titles
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				transition .3s
+				bottom: 0;
+				left: 0;
+				overflow: hidden;
+				&-shadow
+					font-size 2rem
+					line-height 32px
+					position absolute
+					right -175px
+					font-family $B-Regular
+					color $gray
+					display flex
+					color $red
+					flex-wrap wrap
+					opacity .1
+					transition .1s
+					width 250px
+					bottom 25px
+					& span
+						flex-basis 100%
+			&-title
+				font-size 2rem
+				line-height 32px
+				font-family $B-Regular
+				display flex
+				flex-wrap wrap
+				transition .5s
+				position relative
+				height 64px
+				align-items flex-end
+				& span
+					flex-basis 100%
+				&-red
+					color $red
+					font-family $B-Bold
+				&-gray
+					color $gray
+			&-img
+				margin-top -40px
+				z-index 3
+				transition .5s
+				max-height 165px
+				margin-bottom 10px
+		&-container
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			overflow hidden
+			&-text
+				transform: translateY(100%)
+				transition .5s
+				border-bottom 5px solid $red
+				border-radius 0 0 5px 5px
+				padding 20px 40px 38px 40px
+				position absolute
+				left 0
+				right 0
+				bottom 0
+				& span
+					color $text
+					&:nth-child(1)
+						font-size 1rem
+						line-height 23px
+						font-family $Bold
+					&:nth-child(2)
+						margin-left 5px
+						font-size 1rem
+						line-height 23px
+						font-family $Light
+@media(max-width: 76.25rem)
+	.whatwedo
+		.swiper-container-whatwedo
+			overflow hidden
+		.swiper-slide
+			height 100%
+		.swiper-pagination
+			display flex
+		&__block
+			flex-basis calc(50% - 20px)
+			&:nth-child(3n+3)
+				margin-right 20px
+			&:nth-child(2n)
+				margin-right 0
+			&:hover &-header-img
+				transform scale(.37)
+				margin-left 350px
+				margin-top -65px
+			&-container
+				&-text
+					padding-bottom 68px
+@media(max-width: 64rem)
+	.whatwedo
+		&__block
+			&:hover &-header-img
+				margin-left 290px
+@media(max-width: 61.9375rem)
+	.whatwedo
+		&__block
+			&:hover &-header-img
+				margin-left 200px
+			&-container
+				&-text
+					padding-bottom 68px
+@media(max-width: 48rem)
+	.whatwedo
+		&__block
+			flex-basis calc(100% - 30px)
+			max-width 100%
+			margin-left 15px
+			margin-right 15px
+			&:nth-child(3n+3)
+				margin-right 0
+			&:hover &-header-img
+				margin-left 80%
+			&-container
+				&-text
+					padding-bottom 88px
+@media(max-width: 31.25rem)
+	.whatwedo
+		.swiper-pagination-bullet
+			width 15px
+			height 15px
+		.swiper-pagination-bullet-active
+			&:before
+				width 9px
+				height 9px
+		&__block
+			&:hover &-header-img
+				margin-left 60%
+@media (max-width:30rem)
+	.whatwedo
+		&__block
+			&-header
+				&-titles
+					&-shadow
+						display none
+				&-img
+					text-align center
+			&-container
+				&-text
+					padding-bottom 28px

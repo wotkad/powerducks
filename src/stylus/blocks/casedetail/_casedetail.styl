@@ -1,0 +1,372 @@
+.casedetail
+	display flex
+	flex-wrap wrap
+	padding-bottom 71px
+	&__quote
+		flex-basis 100%
+		border: 1px solid #E5E5E5;
+		background $white
+		padding 32px 55px
+		display flex
+		flex-wrap wrap
+		margin-bottom 50px
+		position relative
+		box-shadow 0px 4px 60px rgba(0, 0, 0, 0.25)
+		&-bg
+			position absolute
+			top 19px
+			left 15px
+		&-text
+			font-family $Italic
+			font-size 1.125rem
+			line-height 28px
+			display flex
+			color $text
+			margin-bottom 20px
+			width 85%
+			&-image
+				margin-left 40px
+				position absolute
+				right 30px
+				top calc(50% - 144px)
+		&-author
+			font-family $Semibold
+			font-size 1.125rem
+			line-height 28px
+			color $text
+			display flex
+			align-items center
+			img
+				margin-left 20px
+	&__items
+		padding 0 70px
+		display grid
+		grid-template-columns 33% 33% 33%
+		grid-gap 20px
+		justify-content space-between
+		&-item
+			display flex
+			flex-direction column
+			margin-bottom 46px
+			&-image
+				display flex
+				align-items center
+				margin-bottom 15px
+				& svg
+					margin-top -6px
+				&-title
+					font-family $B-Bold
+					font-size 2rem
+					line-height 32px
+					color $text
+					margin-left 10px
+			&-link
+				a
+					color $red
+					border-bottom 1px dashed $red
+					font-size 1.125rem
+					line-height 18px
+					opacity .7
+					font-family $B-Book
+					display table
+					transition .3s
+					&:hover
+						opacity 1
+			&-text
+				font-family $Regular
+				font-size 1.125rem
+				color $text
+				line-height 28px
+				margin-bottom 25px
+	&__text
+		box-shadow 0px 4px 60px rgba(0, 0, 0, 0.25)
+		padding 55px
+		position relative
+		margin-bottom 65px
+		&-image
+			margin-left 40px
+			position absolute
+			right 0
+			top 0
+			height 100%
+			width 100%
+			z-index 1
+		&-title
+			font-family $Regular
+			font-size 2rem
+			position relative
+			line-height 32px
+			color $text
+			margin-bottom 20px
+			z-index 2
+		&-content
+			font-family $Regular
+			font-size 1.125rem
+			color $text
+			line-height 28px
+			margin-bottom 25px
+			position relative
+			width 80%
+			z-index 2
+		&-link
+			a
+				color $red
+				border-bottom 1px dashed $red
+				font-size 1.125rem
+				line-height 18px
+				opacity .7
+				font-family $B-Book
+				display table
+				transition .3s
+				z-index 2
+				position relative
+				&:hover
+					opacity 1
+	&__results
+		box-shadow 0px 4px 60px rgba(0, 0, 0, 0.25)
+		padding 55px 0 65px 60px
+		border-left 5px solid $red
+		position relative
+		&-title
+			font-family $B-Regular
+			font-size 2rem
+			line-height 32px
+			color $text
+			margin-bottom 20px
+		&-content
+			p
+				width 75%
+				color $text
+				font-family $Regular
+				font-size 1.125rem
+				line-height 28px
+				&:nth-child(1)
+					margin-bottom 20px
+		&-image
+			position absolute
+			height 110%
+			right 10px
+			top -10px
+			width 100%
+	&__button
+		display flex
+		align-items center
+		justify-content center
+		padding 26px
+		width 100%
+		background-color $red
+		&-text
+			p
+				color $white
+				font-family $Regular
+				font-size 1.125rem
+				line-height 28px
+				display inline-block
+			a
+				color $white
+				font-family $Regular
+				font-size 1.125rem
+				line-height 28px
+				margin-left 12px
+				transition .3s
+				border-bottom 1px solid $white
+				&:hover
+					color $black
+					border-color $black
+	&__counts
+		box-shadow 0px 4px 60px rgba(0, 0, 0, 0.25)
+		display flex
+		width 100%
+		flex-wrap wrap
+		margin-bottom 70px
+		&-item
+			flex-basis 33.33334%
+			display flex
+			flex-wrap wrap
+			padding 55px 55px 37px 55px
+			position relative
+			&-number
+				color $red
+				font-size 5.125rem
+				font-family $B-Bold
+				line-height 82px
+				flex-basis 100%
+				position absolute
+				top -30px
+			&-text
+				font-family $Regular
+				font-size 1.125rem
+				line-height 28px
+				color $text
+				flex-basis 100%
+	&__lr
+		display flex
+		justify-content space-between
+		margin-bottom 80px
+		&-block
+			flex-basis 35%
+			position relative
+			justify-content center
+			display flex
+			flex-direction column
+			&-title
+				font-family $B-Bold
+				color $text
+				font-size 2rem
+				line-height 32px
+				margin-bottom 25px
+			&-text
+				font-family $Regular
+				font-size 1.125rem
+				line-height 28px
+				color $text
+				margin-bottom 20px
+				p
+					font-family $Regular
+					font-size 1.125rem
+					line-height 28px
+					color $text
+					margin-bottom 20px
+			&-li
+				margin-bottom 20px
+				position relative
+				padding-left 10px
+				font-family $Regular
+				font-size 1.125rem
+				line-height 28px
+				color $text
+				&:before
+					content ''
+					position absolute
+					left 0px
+					display inline-block
+					background-color $red
+					width 5px
+					height 5px
+					border-radius 50%
+					top 11.5px
+			&-image
+				height 115%
+				position absolute
+				width 100%
+				left 0
+		&:nth-child(4) > div:nth-child(1)
+			flex-basis 60%
+		&:nth-child(6) > div:nth-child(2)
+			flex-basis 60%
+		&:nth-child(6) > div:nth-child(1)
+			order 2
+@media(max-width:1140px)
+	.casedetail
+		&__text
+			&-content
+				width 70%
+		&__results
+			&-content
+				width 70%
+@media(max-width:1024px)
+	.casedetail
+		&__lr
+			margin-bottom 0
+@media(max-width:991px)
+	.casedetail
+		&__counts
+			margin-bottom 30px
+			&-item
+				flex-basis 100%
+		&__lr
+			flex-wrap wrap
+			margin-bottom 30px
+			&-block
+				flex-basis 100%
+				background-position 50% 50% !important
+				height 320px
+		&__results
+			padding 25px
+			&-image
+				display none
+			&-content
+				width 100%
+				p
+					width 100%
+		&__text
+			margin-top -30px
+			margin-bottom 30px
+		&__quote
+			overflow hidden
+			&-text
+				width 100%
+				&-image
+					right 0
+					top 40%
+					opacity .1
+	.casedetail__lr:nth-child(4) > div:nth-child(1)
+			flex-basis 100%
+	.casedetail__lr:nth-child(6) > div:nth-child(2)
+			flex-basis 100%
+@media(max-width:850px)
+	.casedetail
+		&__text
+			overflow hidden
+			&-content
+				width 100%
+			&-image
+				right 0
+				opacity .1
+				top 50%
+@media(max-width:767px)
+	.casedetail
+		padding-bottom 50px
+		&__items
+			padding 0
+			grid-template-columns 50% 50%
+			&-item
+				margin-bottom 20px
+		&__quote
+			padding 25px
+			&-text
+				flex-direction column
+				width 100%
+		&__text
+			padding 25px
+			margin-top 0
+		&__lr
+			&-block
+				&-text
+					margin-bottom 0
+		&__counts
+			margin 0 0 40px
+@media(max-width:675px)
+	.casedetail__lr:nth-child(6) > div:nth-child(2)
+		margin -60px 0 30px 0
+@media(max-width:480px)
+	.casedetail__lr:nth-child(4) > div:nth-child(1)
+		margin-top -60px
+		margin-bottom 30px
+	.casedetail
+		&__lr
+			margin-bottom 70px
+		&__button
+			&-text
+				p
+					display block
+				a
+					margin-left 0
+		&__counts
+			margin-top 20px
+			&-item
+				padding 40px
+		&__items
+			grid-template-columns 100%
+		&__quote
+			&-author
+				flex-direction column
+				align-items flex-start
+				& img
+					margin-left 0
+					margin-top 15px
+			&-text
+				flex-direction column
+				width 100%
+				&-image
+					top 60%

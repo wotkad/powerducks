@@ -1,0 +1,38 @@
+.g-wrapper
+	.contacts
+		.contacts__items
+			.contacts__items-item
+				.contacts__items-item-title Address
+				.contacts__items-item-desc Russia, Moscow, pr-t. Lenina, 23
+			.contacts__items-item
+				.contacts__items-item-title Phone
+				a(href="tel:8800331231112").contacts__items-item-desc 8 800 331 231 112
+			.contacts__items-item
+				.contacts__items-item-title E-MAIL
+				a(href="mailto:info@powerducks.com").contacts__items-item-desc info@powerducks.com
+	.contactsform
+		.contactsform__img
+			img(src="/images/popup-bg.png")
+		.g-wrapper
+			.contactsform__container
+				.contactsform__container-title
+					span BRIEF
+					span US
+				.contactsform__container-titlebig
+					span BRIEF
+					span US
+				form(action="#").contactsform__container-form
+					.contactsform__container-form-input
+						input(type="text" placeholder="Your name" required="required" name="name")
+					.contactsform__container-form-input
+						input(type="tel" placeholder="Your phone" required="required" name="phone")
+					.contactsform__container-form-input
+						input(type="email" placeholder="Your email" required="required" name="email")
+					.contactsform__container-form-textarea
+						textarea(placeholder="Your message" name="text")
+					.contactsform__container-form-button
+						button(type="submit") Send
+.full-map
+	.ymap-container
+		.loader.loader-default
+		#map-yandex

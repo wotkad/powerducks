@@ -1,0 +1,197 @@
+.careers-bg
+	position absolute
+	left 0
+	top 0
+.careers
+	padding-bottom 100px
+	&__blocks.open
+		transition .3s
+		height 100%
+		.careers__blocks-separator
+			border-color $red
+	&__blocks
+		transition .3s
+		&-separator
+			border-bottom 1px solid #D8D8D8
+			transition .3s
+		&-title
+			padding 30px
+			cursor pointer
+			position relative
+			&:hover ~ .careers__blocks-separator
+				border-color $red
+			span
+				&:nth-child(1)
+					font-family $B-Thin
+					font-size 2rem
+					color $gray
+					line-height 32px
+				&:nth-child(2)
+					margin-left 5px
+					font-family $B-Regular
+					font-size 2rem
+					color $gray
+					line-height 32px
+					transition .3s
+				&:nth-child(3)
+					font-family $B-Thin
+					font-size 2rem
+					color $gray
+					line-height 32px
+					padding-right 30px
+			&-arrow
+				transition .3s
+				position absolute
+				right 30px
+				top calc(50% - 10px)
+				transform rotate(-180deg)
+				& i
+					font-size 23px
+					color $fa-darkgray
+		&-title.open
+			span
+				&:nth-child(2)
+					color $red
+			.careers__blocks-title-arrow
+				transform rotate(0deg)
+				& i
+					color $red
+		&-block
+			justify-content space-between
+			padding 0 30px
+			display flex
+			flex-wrap wrap
+			&-text
+				flex-basis 100%
+				font-family $Regular
+				font-size 1.05rem
+				line-height 34px
+				margin-bottom 40px
+				color $text
+			&__contaiter
+				flex-basis 48%
+				margin-bottom 40px
+				&-title
+					font-size 2rem
+					font-family $B-Regular
+					line-height 32px
+					color $text
+					margin-bottom 20px
+					position relative
+					transition .3s
+					&-arrow
+						display none
+				&-title.open
+					font-size 2rem
+					font-family $B-Regular
+					line-height 32px
+					color $red
+					margin-bottom 20px
+					.careers__blocks-block__contaiter-title-arrow
+						transform rotate(0deg)
+						& i
+							color $red
+				&-titleanswer
+					font-size 2rem
+					font-family $B-Regular
+					line-height 32px
+					color $text
+					margin-bottom 20px
+				&-lis
+					&-li
+						margin-bottom 10px
+						line-height 28px
+						color $text
+						font-family $Regular
+						font-size 1.125rem
+						position relative
+						padding-left 30px
+						&:before
+							content ''
+							position absolute
+							left 0
+							top 13px
+							background-color $red
+							width 4px
+							height 4px
+							border-radius 50%
+				&-button
+					border 1px solid $text
+					font-size 1.5rem
+					line-height 24px
+					font-family $B-Bold
+					letter-spacing 1px
+					color $text
+					padding 26px 46px
+					border-radius 5px
+					background none
+					cursor pointer
+					transition .3s
+					&:hover
+						color $white
+						border-color $red
+						background $red
+						box-shadow 0px 0px 60px $red
+.m-careers
+	margin-top 60px
+@media(max-width: 767px)
+	.careers-bg
+		display none
+	.careers
+		padding-bottom 50px
+		&__blocks
+			&-title
+				padding 30px 0
+				&-arrow
+					right 0
+			&-block
+				padding 0
+				&__contaiter
+					flex-basis 100%
+					&-button
+						width 100%
+						padding 26px
+					&-title
+						cursor pointer
+						&-arrow
+							display block
+							transition .3s
+							position absolute
+							right 0
+							top calc(50% - 16px)
+							transform rotate(-180deg)
+							& i
+								font-size 23px
+								color $fa-darkgray
+					&-title.open
+						font-size 2rem
+						font-family $B-Regular
+						line-height 32px
+						color $red
+						margin-bottom 20px
+						.careers__blocks-block__contaiter-title-arrow
+							transform rotate(0deg)
+							& i
+								color $red
+@media(max-width: 480px)
+	.careers
+		&__blocks
+			&-title
+				padding 15px 0
+				span
+					&:nth-child(2)
+						margin-left 5px
+			&-block
+				padding 0
+@media(max-width: 375px)
+	.careers
+		&__blocks
+			&-title
+				span
+					&:nth-child(1)
+						font-size 1.5rem
+					&:nth-child(2)
+						font-size 1.5rem
+						margin-left 3px
+					&:nth-child(3)
+						font-size 1.5rem

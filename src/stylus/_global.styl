@@ -1,0 +1,73 @@
+*
+	margin 0
+	padding 0
+	box-sizing border-box
+	outline: none
+	text-decoration none
+	box-shadow none
+	-webkit-user-select none
+	user-select none
+	-moz-user-select none
+	-ms-user-select none
+	-webkit-tap-highlight-color rgba(0,0,0,0)
+	-webkit-tap-highlight-color transparent
+a
+	text-decoration none
+	color $black
+
+html,
+body
+	height 100%
+	background-color $bg
+
+
+ul li
+	display inline-block
+	letter-spacing normal
+
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder
+	font-family $Regular
+	font-weight 100
+
+textarea::-moz-placeholder,
+input::-moz-placeholder
+	font-family $Regular
+	font-weight 100
+
+textarea:-moz-placeholder,
+input:-moz-placeholder
+	font-family $Regular
+	font-weight 100
+
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder
+	font-family $Regular
+	font-weight 100
+
+.wrapper
+	width 100%
+	margin 0 auto
+	overflow hidden
+
+.g-wrapper
+	max-width 76.25rem
+	margin 0 auto
+	position relative
+	padding 0 20px
+
+section
+	position relative
+
+@media (max-width:1024px)
+	html
+		font-size 12px
+@media (max-width:768px)
+	.g-wrapper
+		max-width 100%
+		padding 0 30px
+@media (max-width:480px)
+	html
+		font-size 13px
+	.g-wrapper
+		padding 0 20px

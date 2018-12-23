@@ -1,0 +1,162 @@
+.clients__overlay
+	background url(/images/menu-bg.png) 0% 50% no-repeat
+	background-size contain
+	position absolute
+	left -25%
+	width 100%
+	height 100%
+.clients
+	padding 90px 0
+	display flex
+	position relative
+	.swiper-pagination
+		display none
+		justify-content center
+		position relative
+		&:before
+			content ''
+			height 1px
+			width 100%
+			display inline-block
+			position absolute
+			background-color #C4C4C4
+			top calc(50% - 1px)
+	.swiper-pagination-bullet
+		opacity 1
+		background $white
+		width 25px
+		height 25px
+		z-index 2
+		border 1px solid #C4C4C4
+		display flex
+		align-items center
+		justify-content center
+	.swiper-pagination-bullet-active
+		position relative
+		border-color $red
+		&:before
+			content ''
+			background $red
+			border-color $red
+			position absolute
+			display inline-block
+			width 17px
+			height 17px
+			border-radius 50%
+	&__block
+		&:nth-child(2)
+			flex-basis 33.33334%
+		&-title
+			font-size 3.25rem
+			font-family $B-Bold
+			line-height 52px
+			color $text
+			padding-left 35px
+			position relative
+			transition .3s
+			margin-bottom 20px
+			&:before
+				content ''
+				position absolute
+				width 2px
+				background-color $red
+				display inline-block
+				left 0
+				top 0
+				height 40px
+		&-desc
+			font-family $Regular
+			font-size 1.125rem
+			line-height 28px
+			color $text
+			padding-right 60px
+			position relative
+			padding-left 35px
+			&:before
+				content ''
+				position absolute
+				width 2px
+				background-color $red
+				display inline-block
+				opacity .1
+				left 0
+				top 0
+				height 100%
+	&__slider
+		flex-basis 66.66667%
+		max-width 66.66667%
+		&-item
+			position relative
+			transition .3s
+			&-img
+				height 140px
+				width 240px
+				box-shadow 0px 4px 60px rgba(0, 0, 0, 0.3)
+			&-subtitle
+				margin-top 15px
+				font-family $B-Book
+				font-size 1.125rem
+				line-height 18px
+				color $text
+				display inline-block
+				border-bottom 1px dashed $text
+			&-text
+				padding 15px 20px
+				background-color $white
+				height 140px
+				width 240px
+				border-radius 5px
+				font-family Light
+				line-height 23px
+				font-size 1rem
+				color $text
+				opacity 0
+				position absolute
+				transition .3s
+				top 0
+				left 0
+			&:hover &-text
+				opacity 1
+			&:hover .clients__slider-item-subtitle
+				color $red
+				border-color $red
+@media(max-width: 78.75rem)
+	.clients
+		padding-top 40px
+		padding-bottom 0
+		flex-wrap wrap
+		&__block
+			&:nth-child(2)
+				flex-basis 100%
+			&-desc
+				margin-bottom 0px
+				padding-right 0px
+		&__slider
+			flex-basis 100%
+			max-width 100%
+			.swiper-container-clients
+				overflow hidden
+				padding: 40px 0;
+@media(max-width: 53.125rem)
+	.clients
+		.swiper-pagination
+			display flex
+			bottom -20px
+@media(max-width: 37.5rem)
+	.clients
+		&__slider
+			&-item
+				display flex
+				align-items center
+				flex-direction column
+				&-text
+					left calc(50% - 120px)
+@media(max-width: 31.25rem)
+	.clients
+		.swiper-pagination-bullet
+			width 15px
+			height 15px
+		.swiper-pagination-bullet-active
+			&:before
+				width 9px
+				height 9px

@@ -1,0 +1,139 @@
+#wetakepridein
+	padding-bottom 100px
+.wetakepridein
+	flex-basis: 100%
+	position relative
+	&__leftimg
+		position absolute
+		left 0
+		top calc(50% - 40px)
+	&__slider
+		width 100%
+		.swiper-pagination
+			display none
+			justify-content center
+			position relative
+			&:before
+				content ''
+				height 1px
+				width 100%
+				display inline-block
+				position absolute
+				background-color #C4C4C4
+				top calc(50% - 1px)
+		.swiper-pagination-bullet
+			opacity 1
+			background $white
+			margin 0 4px
+			width 25px
+			height 25px
+			z-index 2
+			border 1px solid #C4C4C4
+			display flex
+			align-items center
+			justify-content center
+		.swiper-pagination-bullet-active
+			position relative
+			border-color $red
+			&:before
+				content ''
+				background $red
+				border-color $red
+				position absolute
+				display inline-block
+				width 17px
+				height 17px
+				border-radius 50%
+		.swiper-container-wetakepridein
+			padding 30px 0
+		.swiper-button-next.swiper-button-disabled,
+		.swiper-button-prev.swiper-button-disabled
+			background none
+			background-color rgba(0,0,0,.3)
+			border-radius 5px
+			width 40px
+			height 50px
+			display flex
+			opacity 0
+			align-items center
+			justify-content center
+			& i
+				color $white
+		.swiper-button-prev, .swiper-button-next
+			display flex
+			align-items center
+			justify-content center
+			opacity 1
+			background none
+			background-color $red
+			border-radius 5px
+			width 40px
+			transition .3s
+			border 2px solid transparent
+			height 50px
+			& i
+				color $white
+				transition .3s
+			&:hover
+				border 2px solid $red
+				background-color $white
+			&:hover i
+				color $red
+		.swiper-button-prev
+			left -55px
+		.swiper-button-next
+			right -55px
+		.wetakepridein__slider-item
+			border 1px solid #eee
+			transition .3s
+			background-color $white
+			padding 20px
+			.wetakepridein__slider-item-title
+				font-family $B-Book
+				font-size 2rem
+				line-height 32px
+				transition .3s
+				color $text
+				margin-bottom 7px
+			.wetakepridein__slider-item-text
+				font-family $Light
+				font-size 0.875rem
+				color $black
+				line-height 22px
+			&:hover
+				background#EBEBEB
+				box-shadow 0px 4px 20px rgba(0, 0, 0, 0.3)
+			&:hover .wetakepridein__slider-item-title
+				color $red
+@media(max-width: 83.125rem)
+	.wetakepridein
+		&__leftimg
+			top calc(50% - 50px)
+		&__slider
+			padding-bottom 70px
+			.swiper-button-next.swiper-button-disabled,
+			.swiper-button-prev.swiper-button-disabled,
+			.swiper-button-prev,
+			.swiper-button-next
+				display none
+			.swiper-pagination
+				display flex
+			&-slide
+				&__content
+					padding 30px 20px
+@media(max-width: 31.25rem)
+	#wetakepridein
+		padding-bottom 0
+	.wetakepridein
+		margin-top -30px
+		&__slider
+			padding-bottom 50px
+			.swiper-container-wetakepridein
+				padding 30px 0 50px 0
+		.swiper-pagination-bullet
+			width 12px
+			height 12px
+		.swiper-pagination-bullet-active
+			&:before
+				width 6px
+				height 6px

@@ -1,0 +1,282 @@
+.contacts
+	&__items
+		margin 60px 0
+		display flex
+		justify-content space-around
+		&-item
+			flex-basis 25%
+			padding-left 50px
+			&-title
+				font-size 2rem
+				font-family $B-Regular
+				line-height 32px
+				color #313131
+				margin-bottom 15px
+			&-desc
+				font-family $Regular
+				font-size 1.125rem
+				line-height 26px
+				color #313131
+				transition .3s
+				&:hover
+					color $red
+			&:last-child &-desc
+				font-family $Semibold
+				border-bottom 1px dashed rgba(194,33,26,.3)
+.contactsform
+	width 100%
+	position relative
+	background-color $white
+	border 1px solid #e5e5e5
+	margin-bottom 100px
+	overflow hidden
+	&__img
+		position absolute
+		left 0
+		top 0
+	&__container
+		padding 70px 0
+		position relative
+		&-title
+			position absolute
+			right -40px
+			top 150px
+			font-size 5.75rem
+			font-family $B-Bold
+			line-height 92px
+			transform rotate(90deg)
+			& span
+				&:nth-child(1)
+					color $red
+				&:nth-child(2)
+					color $black
+					margin-left 10px
+		&-titlebig
+			font-family $B-Bold
+			font-size 10rem
+			position absolute
+			opacity .05
+			right -155px
+			top 100px
+			transform rotate(90deg)
+			& span
+				&:nth-child(1)
+					color $red
+				&:nth-child(2)
+					color $black
+					margin-left 10px
+		&-close
+			position absolute
+			top -50px
+			left calc(50% - 70px)
+			display flex
+			align-items center
+			cursor pointer
+			transition .3s
+			z-index 999
+			width 140px
+			color $white
+			&:hover
+				color $red
+				text-shadow 0px 0px 40px $red
+			i
+				font-size 28px
+				margin-top -8px
+				color $white
+				transition .3s
+			&:hover i
+				color $red
+			span
+				font-family $B-Regular
+				font-size 2rem
+				line-height 32px
+				letter-spacing 1px
+				margin-left 5px
+		&-form
+			display grid
+			grid-template-columns 35% 50%
+			grid-gap 16px
+			&-input
+				input
+					position relative
+					font-size 1.125rem
+					line-height 23px
+					color #8c8c8c
+					z-index 996
+					border-radius 5px
+					background-color $white
+					padding 23px
+					border 1px solid #e2e2e2
+					width 100%
+					transition .3s
+					&:focus
+						color #5f5f5f
+						border 1px solid #5f5f5f
+					&:hover
+						color #5f5f5f
+						border 1px solid #5f5f5f
+				&:nth-child(1)
+					grid-row 1 / 2
+				&:nth-child(2)
+					grid-row 2 / 3
+				&:nth-child(3)
+					grid-row 3 / 4
+			&-textarea
+				textarea
+					position relative
+					z-index 996
+					background-color $white
+					padding 23px
+					border-radius 5px
+					font-size 1.125rem
+					line-height 23px
+					color #8c8c8c
+					resize none
+					border 1px solid #e2e2e2
+					width 100%
+					height 100%
+					transition .3s
+					&:focus
+						color #5f5f5f
+						border 1px solid #5f5f5f
+					&:hover
+						color #5f5f5f
+						border 1px solid #5f5f5f
+				&:nth-child(4)
+					grid-row 1 / 3
+			&-button
+				button
+					position relative
+					z-index 996
+					padding 23px
+					width 100%
+					background-color $red
+					color $white
+					font-family $B-Bold
+					line-height 23px
+					font-size 1.5rem
+					cursor pointer
+					transition .3s
+					letter-spacing 1px
+					border 2px solid transparent
+					border-radius 5px
+					&:hover
+						border 2px solid $red
+						color $red
+						background-color $white
+				&:nth-child(5)
+					grid-row 3 / 4
+.ymap-container
+	position relative
+	overflow hidden
+	cursor pointer
+	background url('/images/contacts-map.png') #ffffff no-repeat
+	background-position center center
+	background-size cover
+
+#map-yandex
+	position relative
+	width 100%
+	height 465px
+	cursor pointer
+	background-color transparent
+
+.loader
+	position absolute
+	z-index 15
+	top -100%
+	left 0
+	box-sizing border-box
+	width 100%
+	height 100%
+	overflow hidden
+	color #000000
+	transition opacity .7s ease
+	opacity 0
+	background-color rgba(0,0,0,.55)
+
+.loader:after,
+.loader:before
+	box-sizing border-box
+
+.loader.is-active
+	top 0
+	opacity 1
+
+.loader-default:after
+	position absolute
+	top calc(50% - 24px)
+	left calc(50% - 24px)
+	width 48px
+	height 48px
+	content ''
+	animation rotation 1s linear infinite
+	border solid 8px #ffffff
+	border-left-color transparent
+	border-radius 50%
+
+@keyframes rotation
+	from
+		transform rotate(0)
+	to
+		transform rotate(359deg)
+@keyframes blink
+	from
+		opacity .5
+	to
+		opacity 1
+
+@media(max-width:767px)
+	.contactsform
+		&__container
+			padding 50px 0
+			&-title
+				right 0
+				top 220px
+			&-titlebig
+				right -180px
+				font-size 15rem
+				top 164px
+			&-form
+				grid-template-columns 75%
+				&-textarea
+					textarea
+						padding 23px 23px 0 23px
+					&:nth-child(4)
+						grid-row 4 / 5
+				&-button
+					&:nth-child(5)
+						grid-row 5 / 6
+@media(max-width:650px)
+	.contacts
+		&__items
+			margin 30px 0 0
+			flex-wrap wrap
+			&-item
+				padding-left 15px
+				margin-bottom 25px
+				flex-basis 100%
+				&-title
+					margin-bottom 0px
+@media(max-width:530px)
+	.contactsform
+		&__container
+			&-title
+				position relative
+				transform rotate(0deg)
+				line-height 52px
+				font-size 3.25rem
+				margin-bottom 30px
+				text-align center
+				top auto
+			&-titlebig
+				position absolute
+				transform rotate(0deg)
+				line-height 160px
+				top 0
+				left 0
+				right 30px
+				text-align center
+				font-size 10rem
+			&-form
+				grid-template-columns 100%

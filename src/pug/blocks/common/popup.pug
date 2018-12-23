@@ -1,0 +1,25 @@
+.popup
+	.popup__img
+		img(src="/images/popup-bg.png")
+	.g-wrapper
+		.popup__container
+			.popup__container-title
+				span BRIEF
+				span US
+			.popup__container-titlebig
+				span BRIEF
+				span US
+			.popup__container-close
+				i.fa.fa-times
+				span ЗАКРЫТЬ
+			form(action="#").popup__container-form
+				.popup__container-form-input
+					input(type="text" placeholder="Your name" required="required" name="name-popup")
+				.popup__container-form-input
+					input(type="tel" placeholder="Your phone" required="required" name="phone-popup")
+				.popup__container-form-input
+					input(type="email" placeholder="Your email" required="required" name="email-popup")
+				.popup__container-form-textarea
+					textarea(placeholder="Your message" name="text-popup")
+				.popup__container-form-button
+					button(type="submit") Send
